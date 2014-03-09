@@ -1,14 +1,11 @@
-POST /v1.0/1234/instances HTTP/1.1
-User-Agent: python-example-client
-Host: ord.databases.api.rackspacecloud.com
-X-Auth-Token: d6cafa5b-e0c7-4ab8-948e-7c95f2acd031
-Accept: application/xml
-Content-Type: application/xml
-
-<?xml version="1.0" ?>
-<instance flavorRef="https://ord.databases.api.rackspacecloud.com/v1.0/1234/flavors/1" name="xml_rack_instance" xmlns="http://docs.openstack.org/database/api/v1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<instance
+	flavorRef="https://ord.databases.api.rackspacecloud.com/v1.0/1234/flavors/1"
+	name="xml_rack_instance"
+	xmlns="http://docs.openstack.org/database/api/v1.0">
 	<databases>
-		<database character_set="utf8" collate="utf8_general_ci" name="sampledb"/>
+		<database character_set="utf8" collate="utf8_general_ci"
+			name="sampledb"/>
 		<database name="nextround"/>
 	</databases>
 	<users>
@@ -20,4 +17,3 @@ Content-Type: application/xml
 	</users>
 	<volume size="2"/>
 </instance>
-

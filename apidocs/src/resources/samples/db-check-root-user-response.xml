@@ -1,6 +1,3 @@
-HTTP/1.1 200 OK
-Content-Type: application/xml
-Content-Length: 90
-Date: Wed, 25 Jan 2012 21:58:14 GMT
-
-<rootEnabled xmlns="http://docs.openstack.org/database/api/v1.0">True</rootEnabled>
+<?xml version="1.0" encoding="UTF-8"?>
+<rootEnabled xmlns="http://docs.openstack.org/database/api/v1.0"
+    >True</rootEnabled>

@@ -30,11 +30,9 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns:m="http://www.w3.org/1998/Math/MathML"
-    xmlns:html="http://www.w3.org/1999/xhtml" 
-    xml:id="cdb-devguide"
-   
+    xmlns:html="http://www.w3.org/1999/xhtml" xml:id="cdb-devguide"
     version="5.0">
-   
+
     <?rax title.font.size="35px" subtitle.font.size="20px"?>
     <title>Rackspace Cloud Databases Developer Guide for Service
         Management</title>
@@ -54,14 +52,17 @@
         <copyright>
             <year>2011</year>
             <year>2012</year>
+            <year>2013</year>
+            <year>2014</year>
             <holder>Rackspace US, Inc.</holder>
         </copyright>
         <releaseinfo>API v1.0</releaseinfo>
         <productname>Rackspace Cloud Databases</productname>
-        <pubdate>2012-10-04</pubdate>
+        <pubdate/>
         <legalnotice role="rs-api">
             <annotation>
-                <remark>Copyright details are filled in by the template.</remark>
+                <remark>Copyright details are filled in by the
+                    template.</remark>
             </annotation>
         </legalnotice>
         <abstract>
@@ -69,9 +70,9 @@
                 interested in developing service management
                 applications using the Rackspace Cloud Databases
                 Application Programming Interface
-                    (<abbrev>API</abbrev>). </para>
+                    (<abbrev>API</abbrev>).</para>
         </abstract>
-        
+
         <revhistory>
             <revision>
                 <date>2012-10-04</date>
@@ -79,9 +80,7 @@
                     <itemizedlist spacing="compact">
                         <listitem>
                             <para>Added new API call List All Active
-                                Accounts (see <xref
-                                   linkend="GET_getaccounts_mgmt_accounts_"
-                                />).</para>
+                                Accounts.</para>
                         </listitem>
                     </itemizedlist>
                 </revdescription>
@@ -92,19 +91,13 @@
                     <itemizedlist spacing="compact">
                         <listitem>
                             <para>Added new API calls Get Hardware
-                                Info (see <xref
-                                   linkend="GET_getHwInfo_mgmt_instances__instanceId__hwinfo_"
-                                />) and Update All Instances on Host
-                                (see <xref
-                                   linkend="POST_updateHostInstances_mgmt_hosts__hostId__instances_action_"
-                                />).</para>
+                                Info and Update All Instances on
+                                Host.</para>
                         </listitem>
                         <listitem>
                             <para>Added tenant_id field to sample
                                 responses for List All Instances for a
-                                Host API call (see <xref
-                                   linkend="GET_gethostbyid_mgmt_hosts__hostId__"
-                                />).</para>
+                                Host API call.</para>
                         </listitem>
                     </itemizedlist>
                 </revdescription>
@@ -133,20 +126,22 @@
                         </listitem>
                     </itemizedlist>
                 </revdescription>
-            </revision>           
+            </revision>
         </revhistory>
-        
-    <cover>
-        <para>this is a placeholder for the front cover</para>
-    </cover>
-    <cover>
-        <para>this is a placeholder for the back cover</para>
-    </cover>
-    <raxm:metadata xmlns:raxm="http://docs.rackspace.com/api/metadata">
-      <raxm:displayname>API Admin Developer Guide</raxm:displayname>
-      <raxm:product version="v1.0">cdb</raxm:product>
-      <raxm:priority>30</raxm:priority>
-    </raxm:metadata> 
+
+        <cover>
+            <para>this is a placeholder for the front cover</para>
+        </cover>
+        <cover>
+            <para>this is a placeholder for the back cover</para>
+        </cover>
+        <raxm:metadata
+            xmlns:raxm="http://docs.rackspace.com/api/metadata">
+            <raxm:displayname>API Admin Developer
+                Guide</raxm:displayname>
+            <raxm:product version="v1.0">cdb</raxm:product>
+            <raxm:priority>30</raxm:priority>
+        </raxm:metadata>
     </info>
     <chapter xml:id="overview">
         <title>Overview</title>
@@ -165,8 +160,8 @@
             narrow, relating to the needs of a single customer. A
             customer might directly request these operations, however
             only Rackers are authorized to perform them.</para>
-        <para>The following figure shows an
-            overview of Cloud Databases Infrastructure: <informalfigure>
+        <para>The following figure shows an overview of Cloud
+            Databases Infrastructure: <informalfigure>
                 <mediaobject>
                     <imageobject>
                         <imagedata
@@ -180,7 +175,8 @@
             Daniel emailed 11/17 that he would work on this during the
             Private Beta and have it done for the Public
             Beta.</remark>
-        <para security="writeronly">We welcome feedback, comments, and bug reports at <link
+        <para security="writeronly">We welcome feedback, comments, and
+            bug reports at <link
                 xlink:href="http://feedback.rackspacecloud.com"
                 >http://feedback.rackspacecloud.com</link>.</para>
         <remark>Writer: check whether following statement should be
@@ -190,7 +186,7 @@
         <section xml:id="Intended_Audience-d1e122">
             <title>Intended Audience</title>
             <para>Two APIs provide access to Rackspace Cloud
-                Databases: </para>
+                Databases:</para>
             <itemizedlist spacing="compact">
                 <listitem>
                     <para>The <emphasis>management</emphasis> API,
@@ -211,7 +207,7 @@
             </itemizedlist>
             <para>To use the information provided here, you should
                 first have a general understanding of the Database
-                service. You should also be familiar with: </para>
+                service. You should also be familiar with:</para>
             <itemizedlist spacing="compact">
                 <listitem>
                     <para>Database terminology</para>
@@ -253,13 +249,14 @@
                 </listitem>
                 <listitem>
                     <para>The XSD is <link
-                        xlink:href="http://docs-internal.rackspace.com/cdb/api/v1.0/xsd/management.xsd"/>. </para>
+                            xlink:href="http://docs-internal.rackspace.com/cdb/api/v1.0/xsd/management.xsd"
+                        />.</para>
                 </listitem>
             </itemizedlist>
             <para>You can download the most current versions of other
                 API-related documents from <link
                     xlink:href="http://docs.rackspace.com/"
-                    >http://docs.rackspace.com/</link>. </para>
+                    >http://docs.rackspace.com/</link>.</para>
             <para>For information about getting started using Cloud
                 Databases and Cloud Servers, refer to
                     <citetitle>Getting Started with Rackspace Cloud
@@ -270,7 +267,7 @@
                     >http://www.rackspace.com/cloud/cloud_hosting_products/databases/</link>.
                 This site also offers links to Rackspace's official
                 support channels, including knowledge center articles,
-                forums, phone, chat, and email. </para>
+                forums, phone, chat, and email.</para>
             <para>Please visit our <link
                     xlink:href="http://feedback.rackspacecloud.com/forums/71021-product-feedback/category/42449-cloud-databases"
                     >Product Feedback Forum</link> to find out what
@@ -278,7 +275,7 @@
             <para>You can also follow Rackspace updates and
                 announcements via twitter at <link
                     xlink:href="http://www.twitter.com/rackspace"
-                    >http://www.twitter.com/rackspace</link>. </para>
+                    >http://www.twitter.com/rackspace</link>.</para>
             <para>This API uses standard HTTP 1.1 response codes as
                 documented at <link
                     xlink:href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"
@@ -289,10 +286,10 @@
     <chapter xml:id="Concepts-d1e563">
         <title>Concepts</title>
         <?dbhtml stop-chunking?>
-        <para> To use the Cloud Databases API effectively, you should
-            understand several key concepts: </para>
-        <remark>Reviewer: Daniel  Morris is asking Daniel Salinas to
-            do an initial write-up of this chapter.</remark>
+        <para>To use the Cloud Databases API effectively, you should
+            understand several key concepts:</para>
+        <remark>Reviewer: Daniel Morris is asking Daniel Salinas to do
+            an initial write-up of this chapter.</remark>
         <section xml:id="DatabaseInstance-d1e588">
             <title>Database Instance</title>
             <para>A database instance is an isolated MySQL instance in
@@ -335,7 +332,7 @@
     </chapter>
     <chapter xml:id="General_API_Information-d1e633">
         <title>General API Information</title>
-        <para> The Cloud Databases Management API is implemented using
+        <para>The Cloud Databases Management API is implemented using
             a ReSTful web service interface. Most functions of the
             customer-facing Cloud Databases API may be accessed on
             behalf of a customer. The Cloud Databases Management API
@@ -380,7 +377,7 @@
         </section>
         <section xml:id="Request_Response_Types-d1e503">
             <title>Request/Response Types</title>
-            <para> The Cloud Databases API supports both the JSON and
+            <para>The Cloud Databases API supports both the JSON and
                 XML data serialization formats. The request format is
                 specified using the <code>Content-Type</code> header
                 and is <emphasis>required</emphasis> for calls that
@@ -395,12 +392,13 @@
                 specified using both an <code>Accept</code> header and
                 a query extension, the query extension takes
                 precedence.</para>
-            <para security="writeronly">Some operations support an Atom representation that
-                can be used to efficiently determine when the state of
-                services has changed. </para>
-            <remark>Reviewer:  the previous sentence will be hidden
-                for the Private Beta, since it does not appear that
-                Atom will be supported yet. Correct?</remark>
+            <para security="writeronly">Some operations support an
+                Atom representation that can be used to efficiently
+                determine when the state of services has
+                changed.</para>
+            <remark>Reviewer: the previous sentence will be hidden for
+                the Private Beta, since it does not appear that Atom
+                will be supported yet. Correct?</remark>
             <table rules="all">
                 <caption>Response Formats</caption>
                 <?dbfo keep-together="always"?>
@@ -433,7 +431,7 @@
                     </tr>
                 </tbody>
             </table>
-            <remark>Reviewer:  the ATOM row in the table above will be
+            <remark>Reviewer: the ATOM row in the table above will be
                 hidden for the Private Beta, since it does not appear
                 that Atom will be supported yet. Correct?</remark>
             <para>In the request example below, notice that
@@ -445,12 +443,15 @@
             <example xml:id="request_with_headers_json">
                 <title>Request with Headers: JSON</title>
                 <?dbfo keep-together="always"?>
+                <literallayout><xi:include href="samples/db-request-types-json-http.txt" parse="text"><xi:fallback>Missing code sample!<?rax fail?></xi:fallback></xi:include></literallayout>
                 <programlisting language="json"><xi:include href="samples/db-request-types.json" parse="text"><xi:fallback>Missing code sample!<?rax fail?></xi:fallback></xi:include></programlisting>
             </example>
-            <para><?rax-fo keep-with-next?>Therefore an XML response format is returned:</para>
+            <para><?rax-fo keep-with-next?>Therefore an XML response
+                format is returned:</para>
             <example>
                 <title>Response with Headers: XML</title>
                 <?dbfo keep-together="always"?>
+                <literallayout><xi:include href="samples/db-response-types-xml-http.txt" parse="text"><xi:fallback>Missing code sample!<?rax fail?></xi:fallback></xi:include></literallayout>
                 <programlisting language="xml"><xi:include href="samples/db-response-types.xml" parse="text"><xi:fallback>Missing code sample!<?rax fail?></xi:fallback></xi:include></programlisting>
             </example>
         </section>
@@ -459,18 +460,21 @@
             <remark>Reviewer: please give me the updated info for this
                 section. Need to replace info about callback URL,
                 etc.</remark>
-            <para> All successful &GET; requests are
+            <para>All successful &GET; requests are
                     <emphasis>synchronous</emphasis> calls, since they
                 are always retrieving (reading) existing information.
                 With these requests, the caller waits until the call
                 returns with the specified code and response body. For
                 an example, see XXXX.</para>
-            <para>&PUT;, &POST;, and &DELETE; calls are <emphasis>asynchronous</emphasis>, however,
-                since they may take some time to process. Therefore they return 202 ACCEPTED
-                responses containing information with a callback URL, which allows the progress,
-                status, and/or response information of the call to be retrieved at a later point in
-                time. The asynchronous response body will look similar to the following examples,
-                depending on the format requested:</para>
+            <para>&PUT;, &POST;, and &DELETE; calls are
+                    <emphasis>asynchronous</emphasis>, however, since
+                they may take some time to process. Therefore they
+                return 202 ACCEPTED responses containing information
+                with a callback URL, which allows the progress,
+                status, and/or response information of the call to be
+                retrieved at a later point in time. The asynchronous
+                response body will look similar to the following
+                examples, depending on the format requested:</para>
             <example>
                 <title>202 ACCEPTED Response: XML</title>
                 <?dbfo keep-together="always"?>
@@ -481,9 +485,11 @@
                 <?dbfo keep-together="always"?>
                 <programlisting language="json">Reviewer: need code example</programlisting>
             </example>
-            <para>The following table shows the attributes for asynchronous responses:</para>
+            <para>The following table shows the attributes for
+                asynchronous responses:</para>
             <table rules="all">
-                <caption>Attributes for Asynchronous Responses</caption>
+                <caption>Attributes for Asynchronous
+                    Responses</caption>
                 <?dbfo keep-together="always"?>
                 <thead>
                     <tr align="center">
@@ -494,20 +500,25 @@
                 <tbody>
                     <tr>
                         <td colspan="1">jobId</td>
-                        <td colspan="4">An identifier for the specific request.</td>
+                        <td colspan="4">An identifier for the specific
+                            request.</td>
                     </tr>
                     <tr>
                         <td colspan="1">callbackUrl</td>
-                        <td colspan="4">Resource locator for querying the status of the request.</td>
+                        <td colspan="4">Resource locator for querying
+                            the status of the request.</td>
                     </tr>
                 </tbody>
             </table>
             <note>
-                <para>The status for asynchronous calls is retained for up to 24 hours.</para>
+                <para>The status for asynchronous calls is retained
+                    for up to 24 hours.</para>
             </note>
             <note>
-                <para>If a request body does not pass initial validation or an error condition
-                    arises, you may receive an immediate error response from the request.</para>
+                <para>If a request body does not pass initial
+                    validation or an error condition arises, you may
+                    receive an immediate error response from the
+                    request.</para>
             </note>
             <para>When a request is made to the callback URL provided
                 and the job is still running, another
@@ -532,11 +543,14 @@
                 REQUEST and contain details regarding the specific
                 validation error.</para>
             <note>
-                <para>If the response from querying a callback URL is a
-                        <returnvalue>404</returnvalue> NOT FOUND, the details of the error in the
-                    response body will contain information the caller may use to determine whether
-                    the specified job itself was not found, or if the response from the original
-                    request was a <returnvalue>404</returnvalue> NOT FOUND. </para>
+                <para>If the response from querying a callback URL is
+                    a <returnvalue>404</returnvalue> NOT FOUND, the
+                    details of the error in the response body will
+                    contain information the caller may use to
+                    determine whether the specified job itself was not
+                    found, or if the response from the original
+                    request was a <returnvalue>404</returnvalue> NOT
+                    FOUND.</para>
             </note>
             <para>The description of each &PUT;, &POST;, and &DELETE;
                 request identifies the response codes that can
@@ -545,13 +559,17 @@
                 list of the successful and error response codes for
                 the POST /xxxx call.</para>
         </section>
-        <section xml:id="Content_Compression-d1e1120" security="writeronly">
+        <section xml:id="Content_Compression-d1e1120"
+            security="writeronly">
             <title>Content Compression</title>
-            <para> Request and response body data may be encoded with gzip compression to accelerate
-                interactive performance of API calls and responses. This is controlled using the
-                    <code>Accept-Encoding</code> header on the request from the client and indicated
-                by the <code>Content-Encoding</code> header in the server response. Unless the
-                header is explicitly set, encoding defaults to disabled. </para>
+            <para>Request and response body data may be encoded with
+                gzip compression to accelerate interactive performance
+                of API calls and responses. This is controlled using
+                the <code>Accept-Encoding</code> header on the request
+                from the client and indicated by the
+                    <code>Content-Encoding</code> header in the server
+                response. Unless the header is explicitly set,
+                encoding defaults to disabled.</para>
             <table rules="all">
                 <caption>Encoding Headers</caption>
                 <?dbfo keep-together="always"?>
@@ -576,20 +594,17 @@
                 </tbody>
             </table>
         </section>
-        <section xml:id="Persistent_Connections-d1e1187" security="writeronly">
+        <section xml:id="Persistent_Connections-d1e1187"
+            security="writeronly">
             <title>Persistent Connections</title>
-            <para>
-                By default, the API supports persistent connections
-                via HTTP/1.1 keepalives.  All connections will be kept
-                alive unless the connection header is set to close.
-            </para>
-            <para>
-                To prevent abuse, HTTP sessions have a timeout of 20
-                seconds before being closed.
-            </para>
+            <para>By default, the API supports persistent connections
+                via HTTP/1.1 keepalives. All connections will be kept
+                alive unless the connection header is set to
+                close.</para>
+            <para>To prevent abuse, HTTP sessions have a timeout of 20
+                seconds before being closed.</para>
             <note>
-                <para>
-                    The server may close the connection at any time
+                <para>The server may close the connection at any time
                     and clients should not rely on this behavior.
                 </para>
             </note>
@@ -597,18 +612,17 @@
         <?hard-pagebreak?>
         <section xml:id="Limits-d1e1208">
             <title>Limits</title>
-            <para>
-                All accounts, by default, have a preconfigured set of
-                thresholds (or limits) to manage capacity and prevent
-                abuse of the system.  The system recognizes two kinds
-                of limits: <firstterm>rate limits</firstterm> and
-                <firstterm>absolute limits</firstterm>. Rate limits
-                are thresholds that are reset after a certain amount
-                of time passes. Absolute limits are fixed.
-            </para>
+            <para>All accounts, by default, have a preconfigured set
+                of thresholds (or limits) to manage capacity and
+                prevent abuse of the system. The system recognizes two
+                kinds of limits: <firstterm>rate limits</firstterm>
+                and <firstterm>absolute limits</firstterm>. Rate
+                limits are thresholds that are reset after a certain
+                amount of time passes. Absolute limits are
+                fixed.</para>
             <section xml:id="Rate_Limits-d1e1222">
                 <title>Rate Limits</title>
-                <para> Rate limits are specified in terms of both a
+                <para>Rate limits are specified in terms of both a
                     human-readable wild-card URI and a
                     machine-processable regular expression. The
                     regular expression boundary matcher '^' takes
@@ -616,11 +630,11 @@
                     regular expression ^/v1.0/instances would match
                     the bolded portion of the following URI:
                         https://ord.databases.api.rackspacecloud.com<emphasis
-                        role="bold">/v1.0/instances</emphasis>. </para>
+                        role="bold">/v1.0/instances</emphasis>.</para>
                 <para>The following table specifies the default rate
                     limits for all API operations for all &GET;,
                     &POST;, &PUT;, and &DELETE; calls for databases
-                    and database instances: </para>
+                    and database instances:</para>
                 <table rules="all">
                     <caption>Default Rate Limits</caption>
                     <thead>
@@ -664,17 +678,18 @@
                         </tr>
                     </tbody>
                 </table>
-               <para> Rate limits are applied in order relative to the
+                <para>Rate limits are applied in order relative to the
                     verb, going from least to most specific. For
                     example, although the threshold for &POST; to
                     /v1.0/* is 10 per minute, one cannot &POST; to
-                    /v1.0/* more than 50 times within a single day. </para>
-                <para> If you exceed the thresholds established for
+                    /v1.0/* more than 50 times within a single
+                    day.</para>
+                <para>If you exceed the thresholds established for
                     your account, a <errorcode>413 (Rate
                         Control)</errorcode> HTTP response will be
                     returned with a <code>Retry-After</code> header to
                     notify the client when it can attempt to try
-                    again. </para>
+                    again.</para>
             </section>
             <section xml:id="Absolute_Limits-d1e1397">
                 <title>Absolute Limits</title>
@@ -694,8 +709,9 @@
                     <tbody>
                         <tr>
                             <td colspan="1">Instances</td>
-                            <td colspan="3">Maximum number of instances allowed
-                                for your account</td>
+                            <td colspan="3">Maximum number of
+                                instances allowed for your
+                                account</td>
                             <td colspan="1">5</td>
                         </tr>
                         <tr>
@@ -711,24 +727,26 @@
         </section>
         <section xml:id="datetimeformat">
             <title>Date/Time Format</title>
-            <para> The Database Service uses an ISO-8601 compliant
-                date format for the display and consumption of
-                date/time values. </para>
+            <para>The Database Service uses an ISO-8601 compliant date
+                format for the display and consumption of date/time
+                values.</para>
             <para>The system timezone is in UTC. MySQL converts
                 TIMESTAMP values from the current time zone to UTC for
                 storage, and back from UTC to the current time zone
                 for retrieval. This does not occur for other types,
-                such as DATETIME. </para>
-                <example>
-                    <title>DB Service Date/Time Format</title>
-                    <programlisting>yyyy-MM-dd'T'HH:mm:ss.SSSZ</programlisting>
-                <para>See the table below for a description of the date/time format codes.</para>
-                    <para>May 19th, 2011 at 8:07:08 AM, GMT-5 would have the following
-                    format:</para>
-                    <programlisting>2011-05-19T08:07:08-05:00</programlisting>
-                </example>
+                such as DATETIME.</para>
+            <example>
+                <title>DB Service Date/Time Format</title>
+                <programlisting>yyyy-MM-dd'T'HH:mm:ss.SSSZ</programlisting>
+                <para>See the table below for a description of the
+                    date/time format codes.</para>
+                <para>May 19th, 2011 at 8:07:08 AM, GMT-5 would have
+                    the following format:</para>
+                <programlisting>2011-05-19T08:07:08-05:00</programlisting>
+            </example>
             <table rules="all">
-                <caption>Explanation of Date/Time Format Codes</caption>
+                <caption>Explanation of Date/Time Format
+                    Codes</caption>
                 <thead>
                     <tr>
                         <td>Code</td>
@@ -766,7 +784,8 @@
                     </tr>
                     <tr>
                         <td>SSS</td>
-                        <td>Three digit milliseconds of the second</td>
+                        <td>Three digit milliseconds of the
+                            second</td>
                     </tr>
                     <tr>
                         <td>Z</td>
@@ -774,7 +793,7 @@
                     </tr>
                 </tbody>
             </table>
-            
+
         </section>
         <section xml:id="pagination" security="writeronly">
             <title>Pagination</title>
@@ -787,27 +806,36 @@
             <para>To reduce load on the service, list operations will
                 return a maximum of 100 items at a time. This is
                 referred to as <emphasis>pagination</emphasis>.</para>
-            <para> Pagination is the ability to limit the size of the returned data as well as
-                retrieve a specified subset of a large data set. Pagination has two key concepts:
-                limit and offset. <emphasis>Limit</emphasis> is the restriction on the maximum
-                number of items for that type that can be returned. <emphasis>Offset</emphasis> is
-                the starting point for the return data. For example, an offset of 50 specifies that
-                the items that are returned should start with item number 51 (since the numbering is
-                one-based) in the collection. </para>
-            <para>It is important to note that offset <emphasis>must</emphasis> be a multiple of the
-                limit (or zero), otherwise a Bad Request Exception will be thrown. Both limit and
-                offset are specified via request parameters on the URI. The parameters are named
-                    <code>limit</code> and <code>offset</code> respectively, and both apply only to
-                &GET; calls. If unspecified, they default to <code>limit=100</code> and
-                    <code>offset=0</code>. See the examples that follow.</para>
+            <para>Pagination is the ability to limit the size of the
+                returned data as well as retrieve a specified subset
+                of a large data set. Pagination has two key concepts:
+                limit and offset. <emphasis>Limit</emphasis> is the
+                restriction on the maximum number of items for that
+                type that can be returned. <emphasis>Offset</emphasis>
+                is the starting point for the return data. For
+                example, an offset of 50 specifies that the items that
+                are returned should start with item number 51 (since
+                the numbering is one-based) in the collection.</para>
+            <para>It is important to note that offset
+                    <emphasis>must</emphasis> be a multiple of the
+                limit (or zero), otherwise a Bad Request Exception
+                will be thrown. Both limit and offset are specified
+                via request parameters on the URI. The parameters are
+                named <code>limit</code> and <code>offset</code>
+                respectively, and both apply only to &GET; calls. If
+                unspecified, they default to <code>limit=100</code>
+                and <code>offset=0</code>. See the examples that
+                follow.</para>
             <example>
-                <title>Examples of Limits and Offsets for Paging Calls</title>
+                <title>Examples of Limits and Offsets for Paging
+                    Calls</title>
                 <?dbfo keep-together="always"?>
                 <programlisting language="xml">Reviewer: Need code example.</programlisting>
             </example>
-            <para>Pagination applies only to the calls listed in the following table: </para>
-            <remark>Reviewer: need to update the table of paginated API
-                calls below:</remark>
+            <para>Pagination applies only to the calls listed in the
+                following table:</para>
+            <remark>Reviewer: need to update the table of paginated
+                API calls below:</remark>
             <informaltable rules="all">
                 <thead>
                     <tr align="center">
@@ -823,14 +851,14 @@
                         <td colspan="3">List all databases manageable
                             by the account specified. </td>
                     </tr>
-                
+
                     <tr>
                         <td colspan="1">&GET;</td>
                         <td colspan="2"
                                 >/URI/?name=<replaceable>Name</replaceable></td>
                         <td colspan="3">Filter databases.</td>
                     </tr>
-               
+
                     <tr>
                         <td colspan="1">&GET;</td>
                         <td colspan="2"
@@ -838,41 +866,44 @@
                         <td colspan="3">List details of the specified
                             database.</td>
                     </tr>
-               
+
                     <tr>
                         <td colspan="1">&GET;</td>
                         <td colspan="2"
                                 >/URI/<replaceable>ID</replaceable>/xxx</td>
                         <td colspan="3">List details xxx.</td>
                     </tr>
-               
+
                     <tr>
                         <td colspan="1">&GET;</td>
                         <td colspan="2"
                                 >/URI/<replaceable>ID</replaceable>/yyy</td>
                         <td colspan="3">List details yyy.</td>
                     </tr>
-                
-                    
-                    
                 </tbody>
             </informaltable>
             <para>See the following section for examples of paged List
                 Databases calls.</para>
-            <section xml:id="Pagination_Elements_and_Attributes-d1e1754">
+            <section
+                xml:id="Pagination_Elements_and_Attributes-d1e1754">
                 <title>Pagination Elements and Attributes</title>
                 <remark>Reviewer: please review and give me your
                     updates for this section.</remark>
-                <para>For any collection in a result, there is a <code>totalEntries</code> attribute
-                    representing the total number of entries there are for this item type. If the
-                    number of items requested in the &GET; call is less then the total number of
-                    items for this type, then there will be pagination links <code>previous</code>
-                    and/or <code>next</code>, specifying how to get to the previous and/or next set
-                    of records. </para>
+                <para>For any collection in a result, there is a
+                        <code>totalEntries</code> attribute
+                    representing the total number of entries there are
+                    for this item type. If the number of items
+                    requested in the &GET; call is less then the total
+                    number of items for this type, then there will be
+                    pagination links <code>previous</code> and/or
+                        <code>next</code>, specifying how to get to
+                    the previous and/or next set of records.</para>
                 <note>
-                    <para>The <code>previous</code> and/or <code>next</code> link elements are
-                        displayed only if there are items available in the corresponding link. See
-                        the following examples for details.</para>
+                    <para>The <code>previous</code> and/or
+                            <code>next</code> link elements are
+                        displayed only if there are items available in
+                        the corresponding link. See the following
+                        examples for details.</para>
                 </note>
                 <example>
                     <title>List Databases Request with limit:
@@ -898,13 +929,18 @@
                     <?dbfo keep-together="always"?>
                     <programlisting language="xml">Reviewer: Need code example.</programlisting>
                 </example>
-                <para> In the previous two response examples, note that
-                        <code>totalEntries=112</code> and that a link has been provided to retrieve
-                    the next 3 results (<code>limit=3</code>) in the link element identified by the
-                    attribute <code>rel="next"</code> (XML) or <code>"rel":"next"</code> (JSON). </para>
-                <para>The following example shows links to both previous and next results in the
-                    responses, since the request specified to start with the fourth item in the
-                    collection (<code>offset=3</code>):</para>
+                <para>In the previous two response examples, note that
+                        <code>totalEntries=112</code> and that a link
+                    has been provided to retrieve the next 3 results
+                        (<code>limit=3</code>) in the link element
+                    identified by the attribute
+                        <code>rel="next"</code> (XML) or
+                        <code>"rel":"next"</code> (JSON).</para>
+                <para>The following example shows links to both
+                    previous and next results in the responses, since
+                    the request specified to start with the fourth
+                    item in the collection
+                    (<code>offset=3</code>):</para>
                 <example>
                     <title>List Databases Request with limit and
                         offset: XML</title>
@@ -930,29 +966,37 @@
                     <programlisting language="xml">Reviewer: Need code example.</programlisting>
                 </example>
                 <para>
-                    <?rax-fo keep-with-next?> In the previous two response examples, note that
-                        <code>totalEntries=112</code> and two links have been provided to:<itemizedlist>
+                    <?rax-fo keep-with-next?> In the previous two
+                    response examples, note that
+                        <code>totalEntries=112</code> and two links
+                    have been provided to:<itemizedlist>
                         <listitem>
-                            <para>Retrieve the next 3 results (<code>limit=3</code>) via the link
-                                element identified by the attribute <code>rel="next"</code> (XML) or
-                                    <code>"rel":"next"</code> (JSON)</para>
+                            <para>Retrieve the next 3 results
+                                   (<code>limit=3</code>) via the link
+                                element identified by the attribute
+                                   <code>rel="next"</code> (XML) or
+                                   <code>"rel":"next"</code>
+                                (JSON)</para>
                         </listitem>
                         <listitem>
-                            <para>Retrieve the previous 3 results via the link element identified by
-                                the attribute <code>rel="previous"</code> (XML) or
-                                    <code>"rel":"previous"</code> (JSON) </para>
+                            <para>Retrieve the previous 3 results via
+                                the link element identified by the
+                                attribute <code>rel="previous"</code>
+                                (XML) or <code>"rel":"previous"</code>
+                                (JSON)</para>
                         </listitem>
                     </itemizedlist></para>
             </section>
         </section>
-        <section xml:id="efficient_polling_changes_since_parm" security="writeronly">
+        <section xml:id="efficient_polling_changes_since_parm"
+            security="writeronly">
             <title>Efficient Polling with the
                     <parameter>Changes-Since</parameter>
                 Parameter</title>
             <remark>Reviewer: I have hidden this section, since it
                 does not appear that it will be supported for Private
                 Beta. Correct?</remark>
-            <para> The ReST API allows you to poll for the status of
+            <para>The ReST API allows you to poll for the status of
                 certain operations by performing a &GET; on various
                 URIs. Rather than re-downloading and re-parsing the
                 full status at each polling interval, your ReST client
@@ -968,25 +1012,25 @@
                     <returnvalue>304 (Not Modified)</returnvalue>
                 response will be returned. If data has changed, only
                 the items changed since the specified time will be
-                returned in the response. </para>
+                returned in the response.</para>
             <remark>Reviewer: does the following sentence apply, and
                 should it be included?</remark>
             <para>For example, performing a &GET; against
                     https://api.servers.rackspacecloud.com/v1.0/224532/servers?<parameter>changes-since</parameter>=1244012982
                 would list all servers that have changed since Wed, 03
-                Jun 2009 07:09:42 UTC. </para>
+                Jun 2009 07:09:42 UTC.</para>
         </section>
         <section xml:id="DB_faults">
             <title>Faults</title>
             <remark>Reviewer: need to update this section as needed
                 for Cloud Databases.</remark>
-            <para> When an error occurs, the Database Service returns
-                a fault object containing an HTTP error response code
+            <para>When an error occurs, the Database Service returns a
+                fault object containing an HTTP error response code
                 that denotes the type of error. In the body of the
                 response, the system will return additional
-                information about the fault. </para>
-            <para>The following table lists possible fault types with their associated error codes
-                and descriptions.</para>
+                information about the fault.</para>
+            <para>The following table lists possible fault types with
+                their associated error codes and descriptions.</para>
             <informaltable rules="all">
                 <thead>
                     <tr align="center">
@@ -999,12 +1043,15 @@
                     <tr>
                         <td colspan="2"><code>badRequest</code></td>
                         <td colspan="1">400</td>
-                        <td colspan="3">There was one or more errors in the user request.</td>
+                        <td colspan="3">There was one or more errors
+                            in the user request.</td>
                     </tr>
                     <tr>
                         <td colspan="2"><code>unauthorized</code></td>
                         <td colspan="1">401</td>
-                        <td colspan="3">The supplied token is not authorized to access the resources, either it's expired or invalid.</td>
+                        <td colspan="3">The supplied token is not
+                            authorized to access the resources, either
+                            it's expired or invalid.</td>
                     </tr>
                     <tr>
                         <td colspan="2"><code>forbidden</code></td>
@@ -1022,20 +1069,25 @@
                     <tr>
                         <td colspan="2"><code>badMethod</code></td>
                         <td colspan="1">405</td>
-                        <td colspan="3">The request method is not allowed for this resource.</td>
+                        <td colspan="3">The request method is not
+                            allowed for this resource.</td>
                     </tr>
                     <tr>
                         <td colspan="2"><code>overLimit</code></td>
                         <td colspan="1">413</td>
-                        <td colspan="3">Either the number of entities in the request is larger than
-                            allowed limits, or the user has exceeded allowable request rate limits.
-                            See the <code>details</code> element for more specifics. Contact support
-                            if you think you need higher request rate limits.</td>
+                        <td colspan="3">Either the number of entities
+                            in the request is larger than allowed
+                            limits, or the user has exceeded allowable
+                            request rate limits. See the
+                                <code>details</code> element for more
+                            specifics. Contact support if you think
+                            you need higher request rate limits.</td>
                     </tr>
                     <tr>
                         <td colspan="2"><code>badMediaType</code></td>
                         <td colspan="1">415</td>
-                        <td colspan="3">The requested content type is not supported by this service.</td>
+                        <td colspan="3">The requested content type is
+                            not supported by this service.</td>
                     </tr>
                     <tr>
                         <td colspan="2"
@@ -1048,13 +1100,17 @@
                         <td colspan="2"
                             ><code>instanceFault</code></td>
                         <td colspan="1">500</td>
-                        <td colspan="3">This is a generic server error and the message contains the reason for the error. This error could wrap several error messages and is a catch all.</td>
+                        <td colspan="3">This is a generic server error
+                            and the message contains the reason for
+                            the error. This error could wrap several
+                            error messages and is a catch all.</td>
                     </tr>
                     <tr>
                         <td colspan="2"
                             ><code>notImplemented</code></td>
                         <td colspan="1">501</td>
-                        <td colspan="3">The requested method or resource is not implemented.</td>
+                        <td colspan="3">The requested method or
+                            resource is not implemented.</td>
                     </tr>
                     <tr>
                         <td colspan="2"
@@ -1065,76 +1121,74 @@
                     </tr>
                 </tbody>
             </informaltable>
-            <para>The following two  <code>instanceFault</code>
+            <para>The following two <code>instanceFault</code>
                 examples show errors when the server has erred or
                 cannot perform the requested operation:</para>
-            
             <example>
                 <title>Example instanceFault Response: XML</title>
                 <?dbfo keep-together="always"?>
-                <programlisting language="xml">
-<xi:include href="samples/db-faults-instanceFault.xml" parse="text"/>
-                    </programlisting>
+                <literallayout><xi:include href="samples/db-faults-instanceFault-xml-http.txt" parse="text"/></literallayout>
+                <programlisting language="xml"><xi:include href="samples/db-faults-instanceFault.xml" parse="text"/></programlisting>
             </example>
             <example>
                 <title>Example instanceFault Response: JSON</title>
                 <?dbfo keep-together="always"?>
-                <programlisting language="json">
-<xi:include href="samples/db-faults-instanceFault.json" parse="text"/>
-                    </programlisting>
+                <literallayout><xi:include href="samples/db-faults-instanceFault-json-http.txt" parse="text"/></literallayout>
+                <programlisting language="json"><xi:include href="samples/db-faults-instanceFault.json" parse="text"/></programlisting>
             </example>
-            <para> The error code (<code>code</code>) is returned in the body of the response for
-                convenience. The <code>message</code> element returns a human-readable message that
-                is appropriate for display to the end user. The <code>details</code> element is
-                optional and may contain information that is useful for tracking down an error, such
-                as a stack trace. The <code>details</code> element may or may not be appropriate for
-                display to an end user, depending on the role and experience of the end user.</para>
+            <para>The error code (<code>code</code>) is returned in
+                the body of the response for convenience. The
+                    <code>message</code> element returns a
+                human-readable message that is appropriate for display
+                to the end user. The <code>details</code> element is
+                optional and may contain information that is useful
+                for tracking down an error, such as a stack trace. The
+                    <code>details</code> element may or may not be
+                appropriate for display to an end user, depending on
+                the role and experience of the end user.</para>
             <para>The fault's root element (for example,
                     <code>instanceFault</code>) may change depending
-                on the type of error. </para>
-            <para><?rax-fo keep-with-next?>The following two <code>badRequest</code> examples
-                show errors when the volume size is invalid:</para>
+                on the type of error.</para>
+            <para><?rax-fo keep-with-next?>The following two
+                    <code>badRequest</code> examples show errors when
+                the volume size is invalid:</para>
             <example>
                 <title>Example badRequest Fault on Volume Size Errors:
                     XML</title>
                 <?dbfo keep-together="always"?>
-                <programlisting language="xml">
-<xi:include href="samples/db-faults-badRequest.xml" parse="text"/>
-                    </programlisting>
+                <literallayout><xi:include href="samples/db-faults-badRequest-xml-http.txt" parse="text"/></literallayout>
+                <programlisting language="xml"><xi:include href="samples/db-faults-badRequest.xml" parse="text"/></programlisting>
             </example>
             <example>
                 <title>Example badRequest Fault on Volume Size Errors:
                     JSON</title>
                 <?dbfo keep-together="always"?>
-                <programlisting language="json">
-<xi:include href="samples/db-faults-badRequest.json" parse="text"/>
-                    </programlisting>
+                <literallayout><xi:include href="samples/db-faults-badRequest-json-http.txt" parse="text"/></literallayout>
+                <programlisting language="json"><xi:include href="samples/db-faults-badRequest.json" parse="text"/></programlisting>
             </example>
-            <para> The next two examples show
-                    <code>itemNotFound</code> errors:</para>
+            <para>The next two examples show <code>itemNotFound</code>
+                errors:</para>
             <example>
                 <title>Example itemNotFound Fault: XML</title>
                 <?dbfo keep-together="always"?>
-                <programlisting language="xml">
-<xi:include href="samples/db-faults-itemNotFound.xml" parse="text"/>
-                    </programlisting>
+                <programlisting language="xml"><xi:include href="samples/db-faults-itemNotFound.xml" parse="text"/></programlisting>
             </example>
             <example>
                 <title>Example itemNotFound Fault: JSON</title>
                 <?dbfo keep-together="always"?>
-                <programlisting language="json">
-<xi:include href="samples/db-faults-itemNotFound.json" parse="text"/>
-                    </programlisting>
+                <programlisting language="json"><xi:include href="samples/db-faults-itemNotFound.json" parse="text"/></programlisting>
             </example>
         </section>
         <section xml:id="database_instance_status">
             <title>Database Instance Status</title>
-            <para><?rax-fo keep-with-next?>When making an API call to create, list, or delete
-                database instance(s), the following database instance
-                status values are possible:</para>
+            <para><?rax-fo keep-with-next?>When making an API call to
+                create, list, or delete database instance(s), the
+                following database instance status values are
+                possible:</para>
             <itemizedlist spacing="compact">
                 <listitem>
-                    <para>BUILD &ndash; The database instance is being provisioned.</para>
+                    <para>BUILD &ndash; The database instance is being
+                        provisioned.</para>
                 </listitem>
                 <listitem>
                     <para>REBOOT &ndash; The database instance is
@@ -1142,59 +1196,59 @@
                 </listitem>
                 <listitem>
                     <para>ACTIVE &ndash; The database instance is
-                        online and available to take requests.</para>     
+                        online and available to take requests.</para>
                 </listitem>
                 <listitem>
                     <para>BLOCKED &ndash; The database instance is
                         unresponsive at the moment.</para>
                 </listitem>
                 <listitem>
-                    <para>RESIZE &ndash; The database instance is being
-                        resized at the moment.</para>
+                    <para>RESIZE &ndash; The database instance is
+                        being resized at the moment.</para>
                 </listitem>
                 <listitem>
                     <para>SHUTDOWN &ndash; The database instance is
                         terminating services. Also, SHUTDOWN is
                         returned if for any reason the MySQL instance
-                        is shut down but not the actual server. </para>
-                    <para>
-                        <note>
-                            <para>If MySQL has crashed (causing the
-                                SHUTDOWN status), you can try
-                                rebooting the database instance to see
-                                if that corrects the problem. If the
-                                instance still does not recover, you
-                                can escalate the issue to
-                                NebOps.</para>
-                        </note>
-                    </para>
+                        is shut down but not the actual server.</para>
+                    <note>
+                        <para>If MySQL has crashed (causing the
+                            SHUTDOWN status), you can try rebooting
+                            the database instance to see if that
+                            corrects the problem. If the instance
+                            still does not recover, you can escalate
+                            the issue to NebOps.</para>
+                    </note>
                 </listitem>
                 <listitem>
                     <para>ERROR &ndash; The last operation for the
                         database instance failed due to an
-                        error.</para>     
-                </listitem> 
+                        error.</para>
+                </listitem>
             </itemizedlist>
         </section>
     </chapter>
-    
-    <chapter xml:id="API_Operations-d1e2264" 
-        xmlns="http://docbook.org/ns/docbook"
-        role="api-reference">
+
+    <chapter xml:id="API_Operations-d1e2264"
+        xmlns="http://docbook.org/ns/docbook" role="api-reference">
         <title>API Operations</title>
-        
+
         <section xml:id="Database_Instance_Management">
             <title>Database Instance Management</title>
-            <para>This section describes the operations that are supported for managing database instances.</para>        
-            <wadl:resources 
+            <para>This section describes the operations that are
+                supported for managing database instances.</para>
+            <wadl:resources
                 xmlns:wadl="http://wadl.dev.java.net/2009/02">
-                <wadl:resource href="../../../xsd/management.wadl#instances">
+                <wadl:resource
+                    href="../../../xsd/management.wadl#instances">
                     <wadl:method href="getIndex"/>
                 </wadl:resource>
-                <wadl:resource href="../../../xsd/management.wadl#instanceId">
-                    <wadl:method href="showinstances"/>                
+                <wadl:resource
+                    href="../../../xsd/management.wadl#instanceId">
+                    <wadl:method href="showinstances"/>
                 </wadl:resource>
-                <wadl:resource href="../../../xsd/management.wadl#diagnostics">
+                <wadl:resource
+                    href="../../../xsd/management.wadl#diagnostics">
                     <wadl:method href="getdiagnosticdetails"/>
                 </wadl:resource>
                 <wadl:resource
@@ -1210,43 +1264,53 @@
 
         <section xml:id="Host_Information">
             <title>Host Information</title>
-            <para>This section describes the operations that are supported for getting host information.</para>
+            <para>This section describes the operations that are
+                supported for getting host information.</para>
             <wadl:resources
-                    xmlns:wadl="http://wadl.dev.java.net/2009/02">
-                <wadl:resource href="../../../xsd/management.wadl#hosts">
+                xmlns:wadl="http://wadl.dev.java.net/2009/02">
+                <wadl:resource
+                    href="../../../xsd/management.wadl#hosts">
                     <wadl:method href="gethosts"/>
                 </wadl:resource>
-                <wadl:resource href="../../../xsd/management.wadl#hostid">
+                <wadl:resource
+                    href="../../../xsd/management.wadl#hostid">
                     <wadl:method href="gethostbyid"/>
                 </wadl:resource>
-                <wadl:resource href="../../../xsd/management.wadl#instanceAction-hostId">
+                <wadl:resource
+                    href="../../../xsd/management.wadl#instanceAction-hostId">
                     <wadl:method href="updateHostInstances"/>
                 </wadl:resource>
-            </wadl:resources>               
+            </wadl:resources>
         </section>
 
         <section xml:id="Management_Instances_Actions">
             <title>Management Instance Actions</title>
-            <para>This section describes the actions that are supported for database instances.</para>
-            <wadl:resources xmlns:wadl="http://wadl.dev.java.net/2009/02">
-                <wadl:resource href="../../../xsd/management.wadl#instanceAction" >
+            <para>This section describes the actions that are
+                supported for database instances.</para>
+            <wadl:resources
+                xmlns:wadl="http://wadl.dev.java.net/2009/02">
+                <wadl:resource
+                    href="../../../xsd/management.wadl#instanceAction">
                     <wadl:method href="rebootInstance"/>
-                    
+
                 </wadl:resource>
             </wadl:resources>
         </section>
 
         <section xml:id="Storage_Management">
             <title>Storage Management</title>
-            <para>This section describes the operations that are supported for getting information about storage devices.</para>
-            <wadl:resources 
+            <para>This section describes the operations that are
+                supported for getting information about storage
+                devices.</para>
+            <wadl:resources
                 xmlns:wadl="http://wadl.dev.java.net/2009/02">
-                <wadl:resource href="../../../xsd/management.wadl#storage">
-                    <wadl:method href="indexstorage"/>                
+                <wadl:resource
+                    href="../../../xsd/management.wadl#storage">
+                    <wadl:method href="indexstorage"/>
                 </wadl:resource>
-            </wadl:resources>               
-        </section>   
-        
+            </wadl:resources>
+        </section>
+
         <section xml:id="Account_Information">
             <title>Account Information</title>
             <para>This section describes the operations that are
@@ -1257,11 +1321,12 @@
                     href="../../../xsd/management.wadl#accounts">
                     <wadl:method href="getaccounts"/>
                 </wadl:resource>
-                <wadl:resource href="../../../xsd/management.wadl#accountid">
+                <wadl:resource
+                    href="../../../xsd/management.wadl#accountid">
                     <wadl:method href="getaccountbyid"/>
                 </wadl:resource>
             </wadl:resources>
-        </section>  
-           
+        </section>
+
     </chapter>
 </book>
